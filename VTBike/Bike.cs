@@ -32,31 +32,32 @@ namespace VTBike
 
         public string GetBikeDesc()
         {
-            return "This bad boy has" + this.NumOfTyres + "wheels and" + this.NumOfStreamers + "streamers on it. Rad";
+            return "This bad boy has " + this.NumOfTyres + " wheels and " + this.NumOfStreamers + " streamers on it. Rad";
         }
         
         public string GetTypeBike()
         {
             if (this.NumOfTyres < 2)
             {
-                return "A Piece of Junk";
+                return "Your Bike is a Piece of Junk";
             }
-            else if (this.NumOfTyres == 2)
+            else if (this.NumOfTyres == 2 && this.NumOfStreamers != 2)
             {
-                return "A Normal Bike";
+                return "Your Bike is a pretty Normal Bike";
             }
             else if (this.NumOfTyres == 3)
             {
-                return "A Tricycle";
+                return "You have a Tricycle";
             }
             else if (this.NumOfTyres > 3)
             {
-                return "Something that isn't a bike";
+                return "This thing isn't a bike";
             }
             else if (this.NumOfTyres == 2 && this.NumOfStreamers == 2)
             {
-                return "Your mum's bike. Why are you using that thing?";
+                return "You have your mum's bike. Why are you using that thing?";
             }
+            return "wat";
         }
 
         /// <summary>
